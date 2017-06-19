@@ -1,0 +1,17 @@
+git clone https://github.com/arista-eosplus/eos-ansible-quick-start.git
+cd eos-ansible-quick-start
+
+Create the Docker Image
+
+docker build -t ansible .
+
+Note: If you want to run Ansible from Source, run:
+
+docker build -t ansible-dev -f ./Dockerfile-dev .
+
+Run the Container
+
+docker run -i -t -v $(pwd):/ansible-sample ansible
+
+Note: The -v will mount the files in this quickstart repo into the root of the docker container. You will find this in /ansible-sample. If you created the development version, substitute ansible with ansible-dev
+
