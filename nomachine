@@ -1,1 +1,4 @@
 docker run -d -p 4000:4000 --name desktop --cap-add=SYS_PTRACE xod442/<desktop_name>
+
+apt-get -y install locales
+# You will need to do this to get the correct language.
